@@ -1,3 +1,5 @@
+# Cementos Argos
+
 # 🏗️ Bot de Pedidos Cementos Argos - Arturo V3
 
 ## Descripción
@@ -82,7 +84,7 @@ cemento_bot/
 
 ### Prerrequisitos
 
-- Python 3.11+
+- Python 3.8+
 - SQL Server (local o remoto)
 - API Key de OpenAI
 - Git
@@ -91,7 +93,7 @@ cemento_bot/
 
 1. **Clonar el repositorio**
 ```bash
-git clone <url-del-repositorio>
+git clone 
 cd cemento_bot
 ```
 
