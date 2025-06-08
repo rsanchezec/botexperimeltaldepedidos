@@ -167,6 +167,10 @@ def create_gradio_interface(graph_controller) -> gr.Blocks:
         with gr.Row():
             db_status = gr.Markdown(interface.get_database_status())
         
+        # Mensaje de bienvenida resumido
+        with gr.Row():
+            gr.Markdown(_get_welcome_message())
+        
         # Chat principal
         with gr.Row():
             with gr.Column(scale=4):
@@ -416,6 +420,22 @@ def _get_help_markdown() -> str:
     ---
     
     💡 **Tip:** ¡Prueba describir tu pedido completo en la primera frase!
+    """
+
+def _get_welcome_message() -> str:
+    """Obtiene el mensaje de bienvenida resumido"""
+    return """
+    <div style="background-color: #2C3E50; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #3498DB;">
+        <h4 style="color: #ECF0F1; margin: 0 0 10px 0; text-align: center;">🤖 Bienvenido al sistema inteligente de pedidos de Cementos Argos.</h4>
+        <div style="text-align: center;">
+            <p style="color: #BDC3C7; margin: 5px 0; font-size: 16px;">🚀 <strong>Nuevo:</strong> Ahora puedes hacer tu pedido completo en lenguaje natural:</p>
+            <div style="background-color: #34495E; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                <p style="color: #ECF0F1; margin: 5px 0; font-style: italic;">• "Quiero 50 sacos de cemento gris de 50 kg con entrega a domicilio y descarga manual"</p>
+                <p style="color: #ECF0F1; margin: 5px 0; font-style: italic;">• "Mi pedido es: 30 toneladas de cemento blanco a granel para retirar con descarga mecanizada"</p>
+            </div>
+            <p style="color: #BDC3C7; margin: 5px 0;">O si prefieres, puedo guiarte paso a paso. ¿Cómo deseas realizar tu pedido?</p>
+        </div>
+    </div>
     """
 
 # Función principal para crear la interfaz

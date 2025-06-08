@@ -12,23 +12,9 @@ class StartNode(BaseNode):
         super().__init__("inicio")
     
     def execute(self, state: GraphState) -> GraphState:
-        """Ejecuta el saludo inicial"""
-        welcome_message = self._get_welcome_message()
-        self.add_message(state, welcome_message)
+        """Ejecuta la inicialización sin mostrar mensaje"""
         self.set_step(state, StepType.INICIO, waiting_for_input=True)
         return state
-    
-    def _get_welcome_message(self) -> str:
-        """Genera el mensaje de bienvenida"""
-        return """¡Hola! Soy Arturo_V3, tu asistente virtual de Cementos Argos. 🏗️
-
-Puedes decirme tu pedido completo en lenguaje natural, por ejemplo:
-
-💬 *"Quiero 50 sacos de cemento gris de 50 kg con entrega a domicilio y descarga manual"*
-
-💬 *"Mi pedido es: 30 toneladas de cemento blanco a granel"*
-
-O si prefieres, puedo guiarte paso a paso. ¿Cómo deseas realizar tu pedido?"""
 
 class InitialAnalysisNode(BaseNode):
     """Nodo que analiza el primer mensaje del usuario"""
