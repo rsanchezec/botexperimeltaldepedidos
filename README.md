@@ -80,11 +80,15 @@ cemento_bot/
     └── gradio_interface.py       # Interfaz web
 ```
 
+### 🧠 Arquitectura del sistema
+
+![Arquitectura del sistema](img/arquitectura.jpg)
+
 ## 🚀 Instalación y Configuración
 
 ### Prerrequisitos
 
-- Python 3.8+
+- Python 3.11+
 - SQL Server (local o remoto)
 - API Key de OpenAI
 - Git
